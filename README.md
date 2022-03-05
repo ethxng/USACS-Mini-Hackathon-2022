@@ -1,0 +1,2 @@
+# USACS-Mini-Hackathon-2022
+During this mini-hackathon, my teammate Tommy and I attempted to devise a Rate My Landlord web application. We noticed that, while looking for off-campus housing, a lot of emphasis is given on the property, but not the landlords. So we decided to fix this problem. We hope this application can help students have a clearer understanding of who the landlords are before deciding to sign the lease. Technologies used: Node.js, Express, HTML, CSS, and Javascript.
