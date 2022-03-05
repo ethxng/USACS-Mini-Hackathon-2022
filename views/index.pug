@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1(style="color: black; text-align: center; font-size: 40px")= welcome
+  h2(style="text-decoration: underline") All reviews:
+  br
+  form.show_reviews(method='GET' action="/users")
+    button.btn.btn-primary Want to submit a review?
+  br
+  each review in all
+    .box(style="height: auto; length: auto; border: 2px solid black; margin-bottom: 20px; padding: 10px")
+      p(style='font-weight: bold; font-size: 20px')="Landlord: " + review.landlord
+      p.property_val(style='font-weight: bold; font-size: 20px', value=review.property)="Property: " + review.property 
+      p(style='font-weight: bold; font-size: 20px')="Review: " + review.review
+      if review.ratings >= 4
+        p(style='font-weight: bold; font-size: 20px; color: green')="Rating: " + review.ratings
+      if review.ratings >= 2 && review.ratings < 4
+        p(style='font-weight: bold; font-size: 20px; color: orange')="Rating: " + review.ratings
+      if review.ratings < 2
+        p(style='font-weight: bold; font-size: 20px; color: red')="Rating: " + review.ratings
+      p(style='font-size: 15px; text-align: right')=  `${review.users}, Class of ${review.year}` 
+  script(src='/javascripts/homepage.js')
+      
+      
+    
+  
+
